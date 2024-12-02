@@ -5,4 +5,3 @@ we will learn here
    Ex. if a page deleted and the owner want to redirect to another url
    ex. if website got renmaed , user can easily redirected to appropriate URL
   
-4. Building URLs
