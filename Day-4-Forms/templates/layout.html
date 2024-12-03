@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>Welcome , {{title}} page</h1>
+    <!-- header temp word -->
+    {% block content %}  <!-- start contect -->
+    {% endblock content %}  <!-- end contect -->
+
+    <!-- If flash messages exist -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <!-- Iterate over each message -->
+            {% for message in messages %}
+                <div>{{ message }}</div>
+            {% endfor %} <!-- End for loop -->
+        {% endif %} <!-- End if -->
+    {% endwith %} <!-- End with -->
+
+
+</body>
+</html>

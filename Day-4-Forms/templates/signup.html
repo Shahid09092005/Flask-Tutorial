@@ -1,0 +1,112 @@
+
+{% extends "layout.html" %}   <!--run the extended code first-->
+
+{% block content %}  <!-- start contect -->
+<form action="">
+    {{form.hidden_tag()}}   <!--This is for CSRF key-->
+    <div>
+        {{form.username.label}}   <!-- show label -->
+        {{form.username}}   <!-- show box for the label -->
+        {% if form.username.errors %}  <!--If user fill wrong value then it will show error-->
+            <!-- start for loop-->
+            {% for error in form.username.errors %}
+                <div>{{error}}</div>
+            <!--end for loop-->
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <br>
+
+    <div>
+        {{form.email.label}}   <!-- show label -->
+        {{form.email}}   <!-- show box for the label -->
+        {% if form.email.errors %}  <!--If user fill wrong value then it will show error-->
+            <!-- start for loop-->
+            {% for error in form.email.errors %}
+                <div>{{error}}</div>
+            <!--end for loop-->
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <br>
+
+    <div>
+        {{form.gender.label}}   <!-- show label -->
+        {{form.gender}}   <!-- show box for the label -->
+        {% if form.gender.errors %}  <!--If user fill wrong value then it will show error-->
+            <!-- start for loop-->
+            {% for error in form.gender.errors %}
+                <div>{{error}}</div>
+            <!--end for loop-->
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    <br>
+
+    <div>
+        {{form.dob.label}}   <!-- show label -->
+        {{form.dob}}   <!-- show box for the label -->
+        {% if form.dob.errors %}  <!--If user fill wrong value then it will show error-->
+            <!-- start for loop-->
+            {% for error in form.dob.errors %}
+                <div>{{error}}</div>
+            <!--end for loop-->
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <br>
+
+    <div>
+        {{form.password.label}}   <!-- show label -->
+        {{form.password}}   <!-- show box for the label -->
+        {% if form.password.errors %}  <!--If user fill wrong value then it will show error-->
+            <!-- start for loop-->
+            {% for error in form.password.errors %}
+                <div>{{error}}</div>
+            <!--end for loop-->
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <br>
+
+    <div>
+        {{form.checkPassword.label}}   <!-- show label -->
+        {{form.checkPassword}}   <!-- show box for the label -->
+        {% if form.checkPassword.errors %}  <!--If user fill wrong value then it will show error-->
+            <!-- start for loop-->
+            {% for error in form.checkPassword.errors %}
+                <div>{{error}}</div>
+            <!--end for loop-->
+            {% endfor %}
+        {% endif %}        
+    </div>
+
+    <br>
+
+    <div>
+        {{form.remember_me.label}}   <!-- show label -->
+        {{form.remember_me}}   <!-- show box for the label -->
+        {% if form.remember_me.errors %}  <!--If user fill wrong value then it will show error-->
+            <!-- start for loop-->
+            {% for error in form.remember_me.errors %}
+                <div>{{error}}</div>
+            <!--end for loop-->
+            {% endfor %}
+        {% endif %} 
+
+    </div>
+
+    <div>
+        {{form.submit()}} 
+    </div>
+
+    <br>
+</form>
+
+
+{% endblock content %}  <!-- end contect -->
